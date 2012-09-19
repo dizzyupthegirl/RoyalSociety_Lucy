@@ -62,7 +62,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>cinder_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\Program Files\cinder\cinder_0.8.4_vc2010\lib\msw;D:\Program Files\cinder\cinder_0.8.4_vc2010\lib;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\lib;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\lib\msw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\cinder\cinder_0.8.4_vc2010\lib\msw;C:\cinder\cinder_0.8.4_vc2010\lib;D:\Program Files\cinder\cinder_0.8.4_vc2010\lib\msw;D:\Program Files\cinder\cinder_0.8.4_vc2010\lib;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\lib;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\lib\msw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>

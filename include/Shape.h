@@ -11,6 +11,7 @@ using namespace std;
 class Shape{
 	public:
 		void draw();
+		void set();
 
 	private:
 		static const int windowWidth = 1024;
