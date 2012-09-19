@@ -47,7 +47,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>D:\Program Files\cinder\cinder_0.8.4_vc2010\boost;D:\Program Files\cinder\cinder_0.8.4_vc2010\include;..\include;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\include;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\cinder\cinder_0.8.4_vc2010\include;C:\cinder\cinder_0.8.4_vc2010\boost;D:\Program Files\cinder\cinder_0.8.4_vc2010\boost;D:\Program Files\cinder\cinder_0.8.4_vc2010\include;..\include;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\include;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -58,7 +58,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>D:\Program Files\cinder\cinder_0.8.4_vc2010\include;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\cinder\cinder_0.8.4_vc2010\include;D:\Program Files\cinder\cinder_0.8.4_vc2010\include;..\D:\Program Files\cinder\cinder_0.8.4_vc2010\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>cinder_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -105,6 +105,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Circle.cpp" />
+    <ClCompile Include="..\src\Diagonal.cpp" />
     <ClCompile Include="..\src\HorizonalLine.cpp" />
     <ClCompile Include="..\src\Rectangle.cpp" />
     <ClCompile Include="..\src\RoyalSociety_LucyApp.cpp" />
@@ -112,16 +113,17 @@
     <ClCompile Include="..\src\VerticalLine.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\Resources.h" />
-    <ClInclude Include="..\resources\Circle.h" />
-    <ClInclude Include="..\resources\HorizonalLine.h" />
-    <ClInclude Include="..\resources\Rectangle.h" />
-    <ClInclude Include="..\resources\RoyalSociety_LucyApp.h" />
-    <ClInclude Include="..\resources\Shape.h" />
-    <ClInclude Include="..\resources\VerticalLine.h" />
+    <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resources.rc" />
+    <ClInclude Include="..\include\Circle.h" />
+    <ClInclude Include="..\include\Diagonal.h" />
+    <ClInclude Include="..\include\HorizonalLine.h" />
+    <ClInclude Include="..\include\Rectangle.h" />
+    <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\include\RoyalSociety_LucyApp.h" />
+    <ClInclude Include="..\include\Shape.h" />
+    <ClInclude Include="..\include\VerticalLine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

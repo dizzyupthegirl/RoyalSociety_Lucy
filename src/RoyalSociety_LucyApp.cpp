@@ -3,6 +3,7 @@
 #include "cinder/gl/Texture.h"
 #include "Resources.h"
 #include "RoyalSociety_LucyApp.h"
+#include "Rectangle.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -22,7 +23,7 @@ class RoyalSociety_LucyApp : public AppBasic {
 	static const int windowHeight = 1024;
 	node* first_item;
 	Surface* mySurface;
-	Shape sky;
+	Shape* sky;
 };
 
 void insertAfter(node* position, Shape shape){
@@ -40,7 +41,7 @@ void RoyalSociety_LucyApp::prepareSettings(Settings* settings){
 void RoyalSociety_LucyApp::setup()
 {
 	mySurface = new Surface(windowWidth, windowHeight, false);
-	sky = new Shape;
+	sky = new Rectangle();
 }
 
 void RoyalSociety_LucyApp::mouseDown( MouseEvent event )
@@ -50,7 +51,7 @@ void RoyalSociety_LucyApp::mouseDown( MouseEvent event )
 void RoyalSociety_LucyApp::update()
 {
 	uint8_t* dataArray = (*mySurface).getData();
-	sky.rectangle(dataArray, 10, 10, 50, 50, Color8u(1,1,1));
+	sky->draw();
 }
 
 void RoyalSociety_LucyApp::draw()
